@@ -1,15 +1,17 @@
 from pydantic import BaseModel
 
 
-class UserRequest(BaseModel):
+class UserBase(BaseModel):
     name: str
     email: str
 
 
-class UserResponse(BaseModel):
-    name: str
-    email: str
-    posts: list
+class UserRequest(UserBase):
+    ...
+
+
+class UserResponse(UserBase):
+    ...
 
 
 class PostBase(BaseModel):
