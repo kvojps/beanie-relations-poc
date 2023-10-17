@@ -1,0 +1,4 @@
+mypy
+fastapi
+uvicorn
+beanie
